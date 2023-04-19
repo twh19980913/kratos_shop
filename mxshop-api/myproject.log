@@ -1,0 +1,2 @@
+{"level":"info","ts":1669028909.4659998,"caller":"zap_log_file/main.go:27","msg":"failed to fetch URL{url 15 0 https://imooc.com <nil>} {attempt 11 3  <nil>} {backoff 8 1000000000  <nil>}"}
+{"level":"info","ts":1669028934.8141007,"caller":"zap_log_file/main.go:28","msg":"failed to fetch URL{url 15 0 https://imooc.com <nil>} {attempt 11 3  <nil>} {backoff 8 1000000000  <nil>}"}

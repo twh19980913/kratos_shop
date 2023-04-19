@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package helloworld.v1;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "inventory_srv/api/helloworld/v1;v1";
+option java_multiple_files = true;
+option java_package = "dev.kratos.api.helloworld.v1";
+option java_outer_classname = "HelloworldProtoV1";
+
+service Inventory{
+    rpc SetInv(GoodsInvInfo) returns (google.protobuf.Empty); // 设置库存
+    rpc InvDetail(GoodsInvInfo) returns (GoodsInvInfo); // 获取库存信息
+    // 我们一般买东西的时候喜欢从购物车中去买
+    rpc Sell(SellInfo) returns (google.protobuf.Empty); // 库存扣减
+    rpc Reback(SellInfo) returns (google.protobuf.Empty); // 库存归还
+}
+
+message GoodsInvInfo{
+    int32 goodsId = 1;
+    int32 num = 2;
+}
+
+message SellInfo{
+    repeated GoodsInvInfo goodsInfo = 1;
+    string orderSn = 2;
+}

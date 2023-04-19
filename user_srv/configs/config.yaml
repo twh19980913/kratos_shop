@@ -1,0 +1,8 @@
+host: '127.0.0.1'
+port: 8848
+namespace: '59f50436-ade8-4da9-8de6-3af185d37b98'
+user: 'nacos'
+password: 'nacos'
+  
+
+

@@ -1,0 +1,48 @@
+syntax = "proto3";
+package kratos.api;
+
+option go_package = "inventory_srv/internal/conf;conf";
+
+import "google/protobuf/duration.proto";
+
+message Bootstrap {
+  Server server = 1;
+  Data data = 2;
+}
+
+message Server {
+  message HTTP {
+    string network = 1;
+    string addr = 2;
+    google.protobuf.Duration timeout = 3;
+  }
+  message GRPC {
+    string network = 1;
+    string addr = 2;
+    google.protobuf.Duration timeout = 3;
+  }
+  HTTP http = 1;
+  GRPC grpc = 2;
+  string name = 3;
+  string host = 4;
+}
+
+message Data {
+  message MysqlConfig {
+    string host = 1;
+    int64 port = 2;
+    string name = 3;
+    string user = 4;
+    string password = 5;
+  }
+  message NacosConfig{
+    string host = 1;
+    int64 port = 2;
+    string namespace = 3;
+    string user = 4;
+    string password = 5;
+    string dataid = 6;
+  }
+  MysqlConfig mysqlConfig = 1;
+  NacosConfig nacosConfig = 2;
+}

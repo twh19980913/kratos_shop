@@ -1,0 +1,36 @@
+{
+    "server": {
+        "http": {
+            "addr": "0.0.0.0:8000",
+            "timeout": "1s"
+        },
+        "grpc": {
+            "addr": "0.0.0.0:50051",
+            "timeout": "1s"
+        },
+        "name": "order-srv",
+        "host": "192.168.16.129"
+    },
+    "data": {
+        "goodsSrvInfo":{
+            "name":"goods-srv"
+        },
+        "inventorySrvInfo":{
+            "name":"inventory-srv"
+        },
+        "mysqlConfig": {
+            "host": "127.0.0.1",
+            "port": 3306,
+            "name": "mxshop_order_srv",
+            "user": "root",
+            "password": "root"
+        },
+        "nacosConfig": {
+            "host": "127.0.0.1",
+            "port": 8848,
+            "namespace": "59f50436-ade8-4da9-8de6-3af185d37b98",
+            "user": "nacos",
+            "password": "nacos"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "goods-web",
+  "host": "192.168.0.9",
+  "port": 8022,
+  "tags":["mxshop","imooc","bobby","goods","web"],
+  "goods_srv": {
+    "name": "goods-srv"
+  },
+  "jwt": {
+    "key": "Duyd!*NOCZXANrZxyQVg4IUwYCc4Jl1q"
+  },
+  "consul": {
+    "host": "192.168.16.131",
+    "port": 8500
+  }
+}
